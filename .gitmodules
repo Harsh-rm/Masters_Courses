@@ -4,3 +4,9 @@
 [submodule "S30_Homework/Design-6"]
 	path = S30_Homework/Design-6
 	url = https://github.com/super30admin/Design-6
+[submodule "S30_Homework/S30_Homework/Design-7"]
+	path = S30_Homework/S30_Homework/Design-7
+	url = https://github.com/Harsh-rm/Design-7.git
+[submodule "Design-7"]
+	path = Design-7
+	url = https://github.com/Harsh-rm/Design-7.git
