@@ -1,0 +1,41 @@
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ encoder_input_ids (InputLayer)  [(None, 400)]       0           []                               
+                                                                                                  
+ encoder_attention_mask (InputL  [(None, 400)]       0           []                               
+ ayer)                                                                                            
+                                                                                                  
+ tf_roberta_model (TFRobertaMod  TFBaseModelOutputWi  124645632  ['encoder_input_ids[0][0]',      
+ el)                            thPoolingAndCrossAt               'encoder_attention_mask[0][0]'] 
+                                tentions(last_hidde                                               
+                                n_state=(None, 400,                                               
+                                 768),                                                            
+                                 pooler_output=(Non                                               
+                                e, 768),                                                          
+                                 past_key_values=No                                               
+                                ne, hidden_states=N                                               
+                                one, attentions=Non                                               
+                                e, cross_attentions                                               
+                                =None)                                                            
+                                                                                                  
+ dropout_37 (Dropout)           (None, 400, 768)     0           ['tf_roberta_model[0][0]']       
+                                                                                                  
+ dense (Dense)                  (None, 400, 1024)    787456      ['dropout_37[0][0]']             
+                                                                                                  
+ dropout_38 (Dropout)           (None, 400, 1024)    0           ['dense[0][0]']                  
+                                                                                                  
+ dense_1 (Dense)                (None, 400, 1024)    1049600     ['dropout_38[0][0]']             
+                                                                                                  
+ dense_2 (Dense)                (None, 400, 3)       3075        ['dense_1[0][0]']                
+                                                                                                  
+ length (InputLayer)            [(None, 1)]          0           []                               
+                                                                                                  
+ crf_layer (CRFLayer)           (None, 400, 3)       9           ['dense_2[0][0]',                
+                                                                  'length[0][0]']                 
+                                                                                                  
+==================================================================================================
+Total params: 126,485,772
+Trainable params: 126,485,772
+Non-trainable params: 0

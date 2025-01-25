@@ -1,0 +1,9 @@
+datasets
+evaluate
+jupyterlab
+matplotlib
+numpy
+sacrebleu
+tensorflow
+tensorflow-addons
+tokenizers
